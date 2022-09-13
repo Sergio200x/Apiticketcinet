@@ -1,12 +1,12 @@
-import {getConettion} from '../database/conexion.js'
+import {getConettion_tickets} from '../database/conexion_tickets.js'
 import { querys } from '../database/querys.js'
 
-export const tickets_controller= {
+export const controller= {
 
     vista_tickets:   async (req,res)=>
                     {
                         try {
-                            const pool = await getConettion()
+                            const pool = await getConettion_tickets()
                             const result=await pool
                              .request()
                              .query(querys.ticket)
@@ -19,7 +19,7 @@ export const tickets_controller= {
                             } catch (error) {
                             console.log(error)
                             }
-                       
+                      
                     }
 
 

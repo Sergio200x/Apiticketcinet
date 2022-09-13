@@ -2,7 +2,7 @@
   "name": "api_node_indicadores",
   "version": "1.0.0",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "dev": "nodemon src/index.js -exec babel-node"
   },

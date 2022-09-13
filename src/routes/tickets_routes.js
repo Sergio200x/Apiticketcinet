@@ -1,7 +1,7 @@
 import {Router} from 'express';
 const router =Router();
-import {tickets_controller} from '../controllers/tickets_controller.js'
+import {controller} from '../controllers/controllers.js'
 
-router.get('/',tickets_controller.vista_tickets)
+router.get('/',controller.vista_tickets)
 
 export default router
