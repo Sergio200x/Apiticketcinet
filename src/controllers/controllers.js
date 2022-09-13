@@ -20,6 +20,24 @@ export const controller= {
                             console.log(error)
                             }
                       
+                    },
+    vista_semana_pasada:   async (req,res)=>
+                    {
+                        try {
+                            const pool = await getConettion_tickets()
+                            const result=await pool
+                             .request()
+                             .query(querys.tick_semana_pasada)
+                             res.json({
+                                 info:{
+                                      status:200,
+                                       url:"/semana_pasada"},
+                                       data:result.recordset})
+                            
+                            } catch (error) {
+                            console.log(error)
+                            }
+                      
                     }
 
 
