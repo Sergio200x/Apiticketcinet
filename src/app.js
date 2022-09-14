@@ -7,9 +7,9 @@ import tickets_routes from './routes/tickets_routes.js'
 //setings
 app.set('port', config.port )
 
+app.use(cors())
 
 app.use(tickets_routes)
-app.use(cors())
 
 
 
